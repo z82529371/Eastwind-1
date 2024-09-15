@@ -31,34 +31,35 @@ export const lineLoginRequest = async () => {
  * LINE Login登入用，處理line方登入後，向我們的伺服器進行登入動作。query為router.query
  */
 export const lineLoginCallback = async (query) => {
-  // 構造查詢字串
+  // 構造查詢字串，將 query 物件轉換為 URL 查詢參數字串
   const qs = new URLSearchParams({
-    ...query,
+    ...query, // 展開 query 物件的所有屬性
   }).toString()
 
   try {
-    // 使用 fetch 發送 GET 請求到正確的後端 URL
+    // 使用 fetch 發送 GET 請求到伺服器 API，並附加查詢字串
     const response = await fetch(
-      `http://localhost:3005/api/line-login/callback?${qs}`,
+      `http://localhost:3005/api/line-login/callback?${qs}`, // 將查詢字串附加到 API 的 URL 後
       {
-        credentials: 'include', // 確保請求攜帶憑證（如 cookies）
+        credentials: 'include', // 確保請求攜帶憑證（如 cookies），以處理認證
       }
     )
 
+    // 檢查伺服器回應是否成功 (狀態碼為 200-299)
     if (!response.ok) {
-      // 如果 response 狀態碼不是 200-299，則手動拋出錯誤
-      const errorMessage = `HTTP error! status: ${response.status}, statusText: ${response.statusText}`
-      console.error(errorMessage)
-      throw new Error(errorMessage)
+      // 如果回應失敗，手動拋出錯誤
+      const errorMessage = `HTTP error! status: ${response.status}, statusText: ${response.statusText}` // 組合錯誤訊息
+      console.error(errorMessage) // 記錄錯誤訊息到控制台
+      throw new Error(errorMessage) // 拋出錯誤以便後續捕捉
     }
 
-    // 解析並返回 JSON 格式的響應數據
+    // 如果回應成功，將回應轉換為 JSON 格式的資料
     const data = await response.json()
-    return data // 返回數據，讓調用者使用
+    return data // 返回數據給函數調用者使用
   } catch (error) {
-    // 捕捉並記錄錯誤
-    console.error('Login Callback Error:', error.message || error)
-    throw error // 將錯誤拋出，以便外部處理
+    // 捕捉任何錯誤，無論是伺服器錯誤還是請求失敗
+    console.error('Login Callback Error:', error.message || error) // 記錄錯誤訊息
+    throw error // 將錯誤再次拋出，以便讓外層進行進一步處理
   }
 }
 
