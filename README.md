@@ -4,41 +4,6 @@
 
 ![image](https://github.com/user-attachments/assets/ffee3d42-bdfa-4811-81c4-a446117cfbbe)
 
-請大家嚴格遵守 upload 規範<br/> 請大家嚴格遵守 upload 規範<br/>
-
-<h3>**在上傳前update你的版本極度重要**</h3><br/>
-協作流程<br/>
-
-git checkout "自己的分支" -> 到自己的分支下做事<br/>
-
-做到一段落要上傳的流程為: <br/>
-git commit -m "更新内容" -> <br/>
-git checkout dev (跳至 dev 分支) -> <br/>
-git pull origin dev (拉雲端 dev 下來確認為最新檔案)　-><br/>
-git checkout "自己的分支" (回到自己的分支) -><br/>
-git merge dev (合併 dev 檔案至 A，有衝突解衝突) -><br/>
-git push origin "自己的分支" (備份 "自己的分支" 檔案至雲端) -><br/>
-git checkout dev (跳至 dev 分支) -><br/>  
-git merge "自己的分支" (合併整合好的 "自己的分支" 到 dev 分支) -><br/>
-git push origin dev (上傳 dev 檔案)<br/>
-
-**git checkout "自己的分支"** 最後要再記得 切回 "自己的分支" 開發!!!重要!!!<br/>
-
-<h3>**在上傳前update你的版本極度重要**</h3><br/>
-<br/>
-每個人都建立自己的分支做事，定期Pull&Push到dev更新進度<br/>
-<br/>
-若有更新Main分支會Line通知大家**通知後務必優先Pull Main到最新進度**
-<br/>
-命名約定：對分支、提交信息和標籤進行一致的命名約定，讓每個團隊成員都清楚地知道每個分支的目的和內容。<br/>
-EX: Commit  mm/dd 簡要描述更新的內容<br/>
-標題：簡明扼要地描述變更的內容。<br/>
-描述：詳細說明變更的背景、目的、和實現方法，並列出任何需要注意的事項或相關問題。<br/>
-<br/>
-定期同步：所有成員應定期從主分支拉取最新更新，以減少衝突的發生。<br/>
-<br/>
-<br/>
-
 # Project Team Members and Responsibilities
 
 ## 陳功吳 (組長) - [d123469@gmail.com](mailto:d123469@gmail.com)
