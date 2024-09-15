@@ -1,0 +1,39 @@
+.bookingRightArea {
+  background-color: #faf7f0;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+}
+.stickyBooking {
+  position: sticky;
+  top: 60px; // 距离顶部的距离，可以根据需要调整
+  max-height: calc(100vh - 60px); // 设置最大高度，减去上下边距
+  overflow-y: auto; // 如果内容超出，允许滚动
+}
+
+.customBtn {
+  background-color: #b79347;
+  border-color: #b79347;
+}
+
+.customBtn:hover {
+  background-color: #76592a;
+  border-color: #76592a;
+}
+
+.timeControl {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .timeControl {
+    flex-direction: column;
+  }
+  .stickyBooking {
+    position: static; // 在小屏幕上取消粘性定位
+    max-height: none;
+    overflow-y: visible;
+  }
+}

@@ -1,0 +1,116 @@
+.main {
+  width: 100%;
+  padding: 4rem;
+}
+.confirmButton {
+  background: var(--primary);
+}
+.userImg {
+  width: 40px;
+  height: 40px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.menber-info-box-bo {
+  width: 100%;
+  border: 2px solid var(--primary);
+  background: var(--form-bg);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  .chatArea-bl {
+    width: 70%;
+
+    .chatBox {
+      height: 65svh;
+      overflow: auto;
+      padding: 1rem;
+      background: var(--white);
+      border: 1px solid var(--primary);
+      border-radius: 5px;
+      justify-content: flex-end;
+      .client-bl {
+        background: var(--primary-light);
+        border-radius: 25px;
+      }
+      .time {
+        color: var(--text-hover-color);
+        font-size: 1.2rem;
+      }
+      .client-bl {
+        background: var(--primary-light);
+        border-radius: 25px;
+      }
+      .admin-bl {
+        background: var(--bg-text-hover-color);
+        border-radius: 25px;
+      }
+    }
+    .chatInput-bl {
+      width: 100%;
+      border: 1px solid var(--primary);
+      border-radius: 5px;
+      outline: none;
+      input {
+        font-size: 1.6rem;
+      }
+
+      button {
+        width: 50px;
+        background: var(--primary);
+        color: var(--white);
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background: var(--primary-dark);
+        }
+      }
+    }
+  }
+  .memberInfo-bl {
+    width: 25%;
+    .infoBox-bl {
+      max-height: 65svh;
+      overflow-y: auto;
+    }
+    .infoCard-bl {
+      position: relative;
+      width: 100%;
+      padding: 1rem;
+      background: var(--white);
+      border: 2px solid var(--primary);
+      border-radius: 5px;
+      &:hover {
+        border: 2px solid var(--primary);
+        background: var(--primary-light);
+      }
+      .newMessage-bl {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: var(--error-color);
+        font-size: 1.2rem;
+      }
+    }
+    .message {
+      margin-left: 50px;
+      width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .active {
+      border: 2px solid var(--primary);
+      background: var(--primary-light);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0;
+  }
+}

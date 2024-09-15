@@ -1,0 +1,84 @@
+/* 這段代碼主要用於設置產品卡片的樣式 */
+
+/* 設置產品卡片的樣式 */
+.productCard {
+  height: auto;
+  cursor: pointer;
+  width: 28rem; /* 設置產品卡片的寬度為 29rem */
+  position: relative; /* 設置產品卡片的相對定位 */
+  color: var(--bg-text-color);
+
+  @media (max-width: 768px) {
+    width: 23rem;
+  }
+  @media (max-width: 576px) {
+    width: 20rem;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+      transition: transform 0.4s ease; /* 添加過渡效果 */
+    }
+
+    p {
+      transition: all 0.4s ease; /* 添加過渡效果 */
+      color: var(--primary);
+    }
+  }
+
+  /* 設置圖片容器的樣式 */
+  .imgBox {
+    width: 28rem; /* 設置圖片容器的寬度為 28rem */
+    height: 28rem; /* 設置圖片容器的高度為 28rem */
+    margin-bottom: 2rem; /* 設置圖片容器的底部外邊距為 2rem */
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: 768px) {
+      width: 23rem;
+      height: 23rem;
+    }
+
+    @media (max-width: 576px) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    /* 添加半透明黑色遮罩層 */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2); /* 半透明黑色 */
+      z-index: 2; /* 确保遮罩层在图片上方 */
+      pointer-events: none; /* 禁止點擊 */
+    }
+  }
+
+  /* 設置卡片主體的樣式 */
+  .cardBody {
+    text-align: center; /* 確保卡片主體內的文本居中對齊 */
+
+    /* 設置產品名稱區塊的樣式 */
+    .productName {
+      gap: 3px; /* 設置產品名稱區塊內元素的間隙為 3px */
+
+      /* 設置產品描述的樣式 */
+      .productDescription {
+        margin: 0.6rem 0;
+        min-height: calc(1.3em * 2); /* 設置產品描述的最小高度為 1.2em 的兩倍 */
+        line-height: 1.3em; /* 設置產品描述的行高為 1.2em */
+      }
+    }
+  }
+}

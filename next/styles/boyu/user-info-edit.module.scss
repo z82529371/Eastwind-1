@@ -1,0 +1,344 @@
+.user-info-box-bo {
+  color: var(--primary);
+  padding: 2.4rem;
+  height: auto;
+}
+
+.info-form-box-bo {
+  padding: 3.6rem 2.4rem;
+  background-color: var(--form-bg);
+  border: 2px solid var(--primary);
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    gap: 2.2rem;
+  }
+}
+
+/* 表單組件 */
+.info-col-bo {
+  gap: 1.2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  align-items: center;
+  @media (max-width: 576px) {
+    align-items: start;
+    gap: 0.8rem;
+  }
+}
+
+.info-name-bo {
+  width: 6rem;
+  white-space: nowrap;
+  text-align: center;
+
+  @media (max-width: 576px) {
+    width: 4rem;
+  }
+}
+
+.info-text-bo {
+  height: 6rem;
+  color: var(--primary);
+  background-color: var(--white);
+
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+  outline: 3px solid var(--primary);
+  border: none;
+  @media (max-width: 576px) {
+    height: 5rem;
+  }
+}
+
+.info-text-bo:focus,
+.info-text-bo:hover {
+  outline: 3px solid var(--primary-dark);
+}
+
+.info-text-bo::-webkit-input-placeholder {
+  color: var(--primary);
+}
+
+.info-city-bo {
+  width: 8rem;
+
+  @media (max-width: 768px) {
+    width: 7rem;
+  }
+}
+/* 一般資訊 */
+
+.default-information-box-bo {
+  padding-right: 2.4rem;
+  gap: 3rem;
+  @media (max-width: 1200px) {
+    padding-right: 1.6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding-right: 0;
+    gap: 1.6rem;
+  }
+}
+
+.default-information-form-bo {
+  width: 100%;
+}
+
+.default-img-box-bo {
+  padding-left: 2.4rem;
+  gap: 2.4rem;
+
+  @media (max-width: 1200px) {
+    padding-left: 1.6rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.user-img-box-bo {
+  position: relative;
+}
+
+.user-img-bo {
+  width: 14rem; /* 確保寬度固定 */
+  height: 14rem; /* 確保高度與寬度相同 */
+  border-radius: 50%; /* 將正方形轉換為圓形 */
+  object-fit: cover; /* 確保圖片內容完整且不變形 */
+}
+
+.btn-edit-img {
+  color: var(--primary);
+  cursor: pointer;
+  position: absolute;
+  font-size: 2.4rem;
+  bottom: -1.4rem;
+  right: -1.4rem;
+
+  &:hover {
+    color: var(--primary-dark);
+  }
+}
+
+.create-date-box-bo {
+  padding: 0.8rem 2.4rem;
+  border-radius: 5px;
+  flex-direction: row;
+
+  background: var(--primary);
+  color: var(--bg-text-color);
+
+  @media (max-width: 1260px) {
+    flex-direction: column;
+  }
+  @media (max-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+/* 詳細資訊 */
+
+.detail-information-box-bo {
+  padding-right: 2.4rem;
+  gap: 3rem;
+  @media (max-width: 1200px) {
+    padding-right: 1.6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding-right: 0;
+    gap: 1.6rem;
+  }
+}
+
+.detail-information-form-bo {
+  width: 100%;
+}
+
+.detail-card-box-bo {
+  gap: 3rem;
+  height: 100%;
+  padding-left: 2.4rem;
+  @media (max-width: 1200px) {
+    padding-left: 1.6rem;
+  }
+  @media (max-width: 768px) {
+    order: 1;
+    gap: 1.6rem;
+    padding-left: 0rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.card-col-bo {
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.card-body-bo {
+  gap: 2rem;
+  @media (max-width: 1400px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+}
+
+.card-text-down-bo {
+  width: 100%;
+}
+
+.info-card-bo {
+  height: 1.6rem;
+  color: var(--primary);
+  background-color: var(--white);
+  margin: 3px 0;
+  border-radius: 1px;
+  padding: 1rem 0.2rem;
+  width: 100%;
+  outline: 2px solid var(--primary);
+  border: none;
+}
+
+.info-card-bo:focus,
+.info-card-bo:hover {
+  outline: 2px solid var(--primary-dark);
+}
+
+.info-card-bo::-webkit-input-placeholder {
+  color: var(--primary);
+}
+
+.input-card-name-bo {
+  width: 10rem;
+}
+
+.input-card-date-bo {
+  width: 100%;
+}
+.input-card-number-bo {
+  width: 100%;
+}
+
+.icon-card-bo {
+  font-size: 3.2rem;
+}
+
+.icon-trashcan-bo {
+  font-size: 3.2rem;
+  color: var(--error-color);
+  cursor: pointer;
+}
+
+.icon-master-bo,
+.icon-visa-bo {
+  font-size: 2.4rem;
+  color: var(--primary-dark);
+}
+
+.card-date-bo {
+  font-size: 1.4rem;
+}
+
+.btn-edit-info-bo {
+  cursor: pointer;
+  padding: 0.4rem 2.4rem;
+  border-radius: 5px;
+  background: var(--primary);
+  color: var(--bg-text-color);
+
+  @media (max-width: 576px) {
+    padding: 0.4rem 1.6rem;
+  }
+
+  &:hover {
+    background: var(--primary-dark);
+    color: var(--bg-text-color);
+  }
+}
+
+.move-up-bo {
+  @media (max-width: 992px) {
+    order: -1; /* 確保這些元素會移動到最上面 */
+  }
+}
+
+.card-text-box-bo {
+  width: 16rem;
+
+  @media (max-width: 768px) {
+    width: 14.2rem;
+  }
+}
+
+.card-date-box-bo {
+  width: 5rem;
+}
+
+.swal-btn-bo {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #b79347;
+  color: var(--bg-text-color);
+  padding: 0.4rem 1rem;
+}
+
+.swal-popup-bo {
+  background-color: var(--form-bg);
+}
+
+.swal-icon-bo {
+  font-size: 1.6rem;
+
+  @media (max-width: 576px) {
+    font-size: 1.4rem;
+  }
+}
+
+.swal-btn-cancel-bo {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+  padding: 0.4rem 1rem;
+}
+
+.text-error-bo {
+  padding-left: 6.4rem;
+  color: var(--primary);
+  @media (max-width: 576px) {
+    padding-left: 0.4rem;
+  }
+}
+
+.btn-email-bo {
+  width: 8rem;
+  @media (max-width: 768px) {
+    width: 7rem;
+  }
+  border-radius: 5px;
+  color: var(--bg-text-color);
+  background-color: var(--primary);
+
+  &:hover {
+    background-color: var(--primary-dark);
+    color: var(--bg-text-color);
+  }
+}
+
+.input-select {
+  appearance: none; /* 移除瀏覽器預設的樣式 */
+}
+
+.info-correct-bo {
+  background-color: rgba(183, 148, 71, 0.2) !important;
+}

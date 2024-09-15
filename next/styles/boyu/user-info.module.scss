@@ -1,0 +1,260 @@
+/* 使用者資訊框 */
+.user-info-box-bo {
+  color: var(--primary);
+  padding: 2.4rem;
+  height: auto;
+}
+
+/* 資訊表單框 */
+.info-form-box-bo {
+  padding: 3.6rem 2.4rem;
+  background-color: var(--form-bg);
+  border: 2px solid var(--primary);
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    gap: 2.2rem;
+  }
+}
+
+/* 表單組件欄 */
+.info-col-bo {
+  gap: 1.2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  align-items: center;
+
+  @media (max-width: 576px) {
+    align-items: start;
+    gap: 0.8rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+/* 表單名稱欄 */
+.info-name-bo {
+  width: 6rem;
+  white-space: nowrap;
+  text-align: center;
+
+  @media (max-width: 576px) {
+    width: 4rem;
+  }
+}
+
+/* 表單輸入框 */
+.info-text-bo {
+  height: 6rem;
+  border: 3px solid var(--primary);
+  color: var(--primary);
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+
+  @media (max-width: 576px) {
+    height: 5rem;
+  }
+}
+
+/* 一般資訊區塊 */
+.default-information-box-bo {
+  padding-right: 2.4rem;
+  gap: 3rem;
+
+  @media (max-width: 1200px) {
+    padding-right: 1.6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding-right: 0;
+    gap: 1.6rem;
+  }
+}
+
+/* 一般資訊表單 */
+.default-information-form-bo {
+  width: 100%;
+}
+
+/* 一般資訊圖片框 */
+.default-img-box-bo {
+  padding-left: 2.4rem;
+  gap: 2.4rem;
+
+  @media (max-width: 1200px) {
+    padding-left: 1.6rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* 使用者圖片框 */
+.user-img-box-bo {
+  position: relative;
+}
+
+/* 使用者圖片 */
+.user-img-bo {
+  width: 14rem;
+  height: 14rem; /* 確保高度與寬度相同 */
+  border-radius: 50%;
+  object-fit: cover; /* 確保圖片內容完整且不變形 */
+}
+
+/* 編輯圖片按鈕 */
+.btn-edit-img {
+  cursor: pointer;
+  position: absolute;
+  font-size: 2.4rem;
+  bottom: -0.8rem;
+  right: -0.8rem;
+
+  &:hover {
+    color: var(--primary-dark);
+  }
+}
+
+/* 建立日期框 */
+.create-date-box-bo {
+  padding: 0.8rem 2.4rem;
+  border-radius: 5px;
+  flex-direction: row;
+  background: var(--primary);
+  color: var(--bg-text-color);
+
+  @media (max-width: 1260px) {
+    flex-direction: column;
+  }
+  @media (max-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+/* 詳細資訊區塊 */
+.detail-information-box-bo {
+  padding-right: 2.4rem;
+  gap: 3rem;
+
+  @media (max-width: 1200px) {
+    padding-right: 1.6rem;
+  }
+
+  @media (max-width: 992px) {
+    padding-right: 0;
+    gap: 1.6rem;
+  }
+}
+
+/* 詳細資訊表單 */
+.detail-information-form-bo {
+  width: 100%;
+}
+
+/* 詳細卡片區塊 */
+.detail-card-box-bo {
+  gap: 3rem;
+  height: 100%;
+  padding-left: 2.4rem;
+
+  @media (max-width: 1200px) {
+    padding-left: 1.6rem;
+  }
+
+  @media (max-width: 768px) {
+    order: 1;
+    gap: 1.6rem;
+    padding-left: 0rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* 卡片欄 */
+.card-col-bo {
+  gap: 1.5rem;
+}
+
+/* 卡片內容 */
+.card-body-bo {
+  gap: 2rem;
+
+  @media (max-width: 1200px) {
+    gap: 0.8rem;
+  }
+}
+
+/* 卡片圖標 */
+.icon-card-bo {
+  font-size: 4rem;
+}
+
+/* 卡片日期 */
+.card-type-bo {
+  font-size: 1.4rem;
+}
+
+.card-text-up-bo {
+  justify-content: start;
+  @media (max-width: 1107px) {
+    justify-content: center;
+  }
+  @media (max-width: 992px) {
+    justify-content: start;
+  }
+}
+
+/* 編輯資訊按鈕 */
+.btn-edit-info-bo {
+  cursor: pointer;
+  padding: 0.4rem 2.4rem;
+  border-radius: 5px;
+  background: var(--primary);
+  color: var(--bg-text-color);
+
+  &:hover {
+    background: var(--primary-dark);
+    color: var(--bg-text-color);
+  }
+}
+
+.move-up-bo {
+  @media (max-width: 992px) {
+    order: -1; /* 確保這些元素會移動到最上面 */
+  }
+}
+
+.link {
+  color: var(--bg-text-color);
+}
+
+.swal-btn-bo {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #b79347;
+  color: var(--bg-text-color);
+  padding: 0.4rem 1rem;
+}
+
+.swal-popup-bo {
+  background-color: var(--form-bg);
+}
+
+.swal-icon-bo {
+  font-size: 1.6rem;
+
+  @media (max-width: 576px) {
+    font-size: 1.4rem;
+  }
+}
+
+.swal-btn-cancel-bo {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+  padding: 0.4rem 1rem;
+}

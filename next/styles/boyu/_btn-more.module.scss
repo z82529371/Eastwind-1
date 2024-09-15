@@ -1,0 +1,33 @@
+.btn-more {
+  color: var(--primary);
+  width: 20rem;
+  padding: 1rem 0 1rem 2rem;
+  border: 2px solid var(--primary);
+  border-radius: 4rem;
+  gap: 6rem;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .edit-icon {
+    text-align: start;
+    background-image: url('/images/boyu/btn/btnMore.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5rem;
+    height: 1.2rem;
+    transition: 0.3s;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    color: var(--bg-text-color);
+    border-color: var(--bg-text-color);
+    .edit-icon {
+      background-image: url('/images/boyu/btn/btnMoreHover.svg');
+      transform: translateX(3px);
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Nato Sans TC';
+  src: url('../public/fonts/NotoSansTC-SemiBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* 顏色系統 */
+:root {
+  --primary: #b79347;
+  --primary-dark: #76592a;
+  --primary-light: #ffe9b1;
+  --background: #2b4d37;
+  --background-dark: #223329;
+  --form-bg: #faf7f0;
+  --form-bg-dark: #e1ded8;
+  --text-color: #0e0e0e;
+  --text-hover-color: #747474;
+  --bg-text-color: #faf7f0;
+  --bg-text-hover-color: #e1ded8;
+  --bg-text-light-color: #ffffdd;
+  --white: #ffffff;
+  --error-color: #d71515;
+  --current-color: #55c57a;
+}
+
+/* 字體系統 */
+html {
+  font-family: 'Nato Sans TC', sans-serif;
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p {
+  font-family: 'Nato Sans TC', sans-serif;
+  font-weight: 900;
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-size: 6rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 4.8rem;
+  @media screen and (max-width: 768px) {
+    font-size: 3.6rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 3.6rem;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 3rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2.4rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 2.4rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+p,
+.p {
+  font-size: 1.6rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+}
+
+/* 基本設置 */
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 針對Chrome和其他Webkit瀏覽器 */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--primary);
+  box-shadow: 0 0 0px 1000px var(--white) inset; /* 防止背景顏色干擾 */
+  transition: background-color 0s; /* 去掉長時間的過渡效果 */
+}
+
+/* 針對Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+  color: var(--primary);
+}

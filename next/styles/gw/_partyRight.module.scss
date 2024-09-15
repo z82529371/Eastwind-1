@@ -1,0 +1,9 @@
+.rightArea {
+  width: 35%;
+}
+.stickyBooking {
+  position: sticky;
+  top: 70px; // 距离顶部的距离，可以根据需要调整
+  max-height: calc(100vh - 60px); // 设置最大高度，减去上下边距
+  overflow-y: auto; // 如果内容超出，允许滚动
+}

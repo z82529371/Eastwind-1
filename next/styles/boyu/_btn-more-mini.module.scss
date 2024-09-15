@@ -1,0 +1,28 @@
+.btn-more-mini {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  transition: 0.3s;
+  &:hover {
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateX(3px);
+  }
+  @media (max-width: 576px) {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.more-mini-icon {
+  font-size: 1.6rem;
+  color: var(--primary);
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  @media (max-width: 576px) {
+    font-size: 1.2rem;
+  }
+}

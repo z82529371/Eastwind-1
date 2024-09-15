@@ -1,0 +1,35 @@
+$background: #2b4d37;
+$background-light: #3c6349; // 新增：比基本背景色更亮的顏色
+$primary: #b79347;
+$bg-text-color: #faf7f0;
+$white: #ffffff;
+$transition-time: 0.3s;
+
+.joinGw {
+  display: flex;
+  gap: 10px;
+}
+
+.partyBtn {
+  padding: 5px 10px;
+  // border-radius: 5px;
+  cursor: pointer;
+  transition: background-color $transition-time ease;
+  // background-color: $background;
+  border: none;
+  color: $primary;
+  font-size: inherit;
+  font-weight: normal;
+
+  // &:not(.activeGw):hover {
+  //   background-color: $background-light; // 使用更亮的顏色
+  // }
+
+  &.activeGw {
+    // background-color: $primary;
+    border-bottom: 3px solid #2b4d37;
+    color: $background;
+    font-weight: bold;
+    cursor: default;
+  }
+}

@@ -1,0 +1,368 @@
+/* 整個登入框的容器 */
+.login-box-bo {
+  width: 100%;
+  height: 100vh;
+}
+
+/* 使用者登入區域 */
+.user-login-section-bo {
+  position: relative;
+  flex-grow: 1;
+  gap: 3rem;
+  height: 100%;
+
+  background-image: url(/images/boyu/login/bg-user.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 1s;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto; /* 修改這裡，讓高度自適應內容 */
+    padding: 6rem 0 2.4rem 0; /* 減少內邊距 */
+    gap: 1.2rem; /* 減少間距 */
+  }
+
+  /* 當滑鼠懸停時的樣式 */
+  &:hover {
+    flex-grow: 4;
+    @media (max-width: 768px) {
+      flex-grow: 1;
+    }
+
+    /* 當滑鼠懸停在 user-login-section-bo 上，且 hover 狀態時，user-login-title-bo 的樣式 */
+    &:hover .user-login-title-bo {
+      flex-direction: row;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+/* 使用者登入區域的 hover 狀態 */
+.user-login-section-bo.hover {
+  flex-grow: 4;
+  @media (max-width: 768px) {
+    flex-grow: 1;
+  }
+}
+
+/* 使用者登入區域標題的 hover 狀態 */
+.user-login-section-bo.hover .user-login-title-bo {
+  flex-direction: row;
+}
+
+/* 使用者登入標題 */
+.user-login-title-bo {
+  flex-direction: column;
+  z-index: 2;
+  color: var(--bg-text-color);
+  gap: 0.8rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+/* 使用者登入表單容器 */
+.user-login-box-bo {
+  padding: 3.6rem 0;
+  flex-direction: column;
+  width: 40rem;
+  background: var(--background);
+  z-index: 4;
+  display: none;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem; /* 減少內邊距 */
+  }
+  @media (max-width: 576px) {
+    width: 30rem;
+  }
+}
+
+/* 使用者登入表單容器的 active 狀態 */
+
+/* 使用者登入表單 */
+.user-login-form-bo {
+  cursor: default;
+  position: relative;
+  padding: 0 2.4rem 1.2rem 2.4rem;
+  z-index: 10;
+
+  @media (max-width: 576px) {
+    padding: 0.8rem 0 1.2rem 0;
+  }
+}
+
+/* 使用者登入選項 */
+.user-login-option-bo * {
+  margin-bottom: 1.2rem;
+  color: var(--primary);
+
+  & a:hover {
+    color: var(--primary-dark);
+  }
+}
+
+/* 使用者登入按鈕 */
+.btn-user-login-bo {
+  width: 40%;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.2rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn-user-login-bo:hover {
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+}
+
+/* 公司登入區域 */
+.company-login-section-bo {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+  background-image: url(/images/boyu/login/bg-company.png);
+  background-size: cover;
+  background-position: center;
+  transition: all 1s;
+  gap: 3rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto; /* 修改這裡，讓高度自適應內容 */
+    padding: 2.4rem; /* 減少內邊距 */
+
+    gap: 1.2rem; /* 減少間距 */
+  }
+
+  /* 當滑鼠懸停時的樣式 */
+  &:hover {
+    flex-grow: 4;
+    @media (max-width: 768px) {
+      flex-grow: 1;
+    }
+
+    /* 當滑鼠懸停在 company-login-section-bo 上，且 hover 狀態時，company-login-title-bo 的樣式 */
+    &:hover .company-login-title-bo {
+      flex-direction: row;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+/* 公司登入區域的 hover 狀態 */
+.company-login-section-bo.hover {
+  flex-grow: 4;
+  @media (max-width: 768px) {
+    flex-grow: 1;
+  }
+}
+
+/* 公司登入區域標題的 hover 狀態 */
+.company-login-section-bo.hover .company-login-title-bo {
+  flex-direction: row;
+}
+
+/* 公司登入標題 */
+.company-login-title-bo {
+  flex-direction: column;
+  z-index: 2;
+  color: var(--bg-text-color);
+  gap: 0.8rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+/* 公司登入表單容器 */
+.company-login-box-bo {
+  padding: 3.6rem 0;
+  flex-direction: column;
+  width: 40rem;
+  background: var(--background);
+  z-index: 4;
+  display: none;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem; /* 減少內邊距 */
+  }
+
+  @media (max-width: 576px) {
+    width: 30rem;
+  }
+}
+
+/* 公司登入表單 */
+.company-login-form-bo {
+  cursor: default;
+  position: relative;
+  padding: 0 2.4rem 1.2rem 2.4rem;
+  z-index: 10;
+  gap: 1.2rem;
+
+  @media (max-width: 576px) {
+    padding: 0 1.6rem 1.2rem 1.6rem;
+  }
+}
+
+/* 公司登入選項 */
+.company-login-option-bo * {
+  margin-bottom: 1.2rem;
+  color: var(--primary);
+
+  & a:hover {
+    color: var(--primary-dark);
+  }
+}
+
+/* 公司登入按鈕 */
+.btn-company-login-bo {
+  width: 40%;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.2rem 1.2rem;
+}
+
+.btn-company-login-bo:hover {
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+}
+
+/* 表單組件 */
+.form-group-bo {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.form-label-bo:last-child {
+  margin-bottom: 0;
+}
+
+.form-input-bo {
+  color: var(--primary);
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  background-color: var(--white);
+  border: none;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.input-email-bo {
+  margin-top: 0.8rem;
+}
+
+.form-input-bo:focus,
+.form-input-bo:hover {
+  outline: 3px solid var(--primary);
+}
+
+.form-input-bo::-webkit-input-placeholder {
+  color: var(--primary);
+}
+
+.form-label-bo {
+  color: var(--bg-text-color);
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.form-label-bo:last-child {
+  margin-bottom: 0;
+}
+
+.btn-get-CAPTCHA-bo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.2rem 0.8rem;
+}
+
+.btn-get-CAPTCHA-bo:hover {
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+}
+
+/* 使用者登入表單容器的 active 狀態 */
+.active {
+  display: block;
+}
+
+.form-input-bo:focus {
+  display: block;
+}
+
+.text-error-bo {
+  padding: 0 2rem;
+  color: var(--primary);
+}
+
+.swal-btn-bo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.4rem 1rem;
+}
+
+.swal-popup-bo {
+  background-color: var(--form-bg);
+}
+
+.swal-icon-bo {
+  font-size: 1.6rem;
+
+  @media (max-width: 576px) {
+    font-size: 1.4rem;
+  }
+}
+
+.divider {
+  gap: 1.2rem;
+  text-align: center;
+  margin: 1.2rem 3rem;
+  color: var(--primary);
+
+  @media (max-width: 576px) {
+    margin: 1.2rem 1.6rem;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 3px solid var(--primary);
+  }
+}
+
+.user-fast-login-bo {
+  color: var(--primary);
+}

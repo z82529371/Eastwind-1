@@ -1,0 +1,215 @@
+/* 卡片樣式 */
+.course-card-bo {
+  display: block;
+  color: var(--bg-text-color);
+  position: relative;
+  width: 30rem;
+  height: 34rem;
+  margin: 0 1.2rem;
+  backface-visibility: hidden;
+  opacity: 0; // 初始狀態為不可見
+  will-change: transform, opacity;
+
+  transition: opacity 2s ease, transform 2s ease; // 過渡效果
+
+  @media (max-width: 768px) {
+    width: 28rem;
+    height: 32rem;
+    margin: 0 1rem;
+  }
+}
+
+.course-card-bo.visible {
+  opacity: 1; // 當元素可見時變為不透明
+  transform: translateX(0); // 移動回原來位置
+}
+
+/* 前面的卡片樣式 */
+.course-card-front-bo {
+  padding: 3.5rem;
+  width: 30rem;
+  height: 34rem;
+  backface-visibility: hidden;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.5s ease; /* 添加背景圖片的過渡和延遲 */
+  transform-origin: center;
+
+  @media (max-width: 768px) {
+    width: 28rem;
+    height: 32rem;
+  }
+
+  &:hover {
+    transition: all 0.5s ease; /* 添加背景圖片的過渡和延遲 */
+    background-color: var(--primary-dark); /* 懸停時變成純色背景 */
+    background-image: none; /* 移除背景圖片 */
+    transform: rotate(-5deg); /* 懸停時前面偏移10度 */
+  }
+
+  &:hover .course-more {
+    .edit-icon {
+      background-image: url('/images/boyu//btn/btnMoreHover.svg');
+      transform: translateX(2px);
+    }
+  }
+}
+
+/* 前面的卡片漸變效果 */
+
+.course-card-front-bo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+
+    rgba(218, 165, 32, 0),
+    rgb(116, 88, 17)
+  );
+  background-size: contain;
+  z-index: 3;
+  transition: all 0.5s ease, transform 0.5s ease; /* 添加背景圖片的過渡和延遲 */
+}
+
+.course-card-front-bo:hover::after {
+  opacity: 0; /* 懸停時隱藏背景重疊 */
+}
+
+/* 卡片內容樣式 */
+.course-card-body-bo {
+  z-index: 4;
+}
+
+.course-more {
+  align-self: end;
+  color: var(--bg-text-color);
+  width: 8rem;
+  padding: 0.4rem 0rem 0.4rem 2rem;
+  border: 2px solid var(--bg-text-color);
+  border-radius: 4rem;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .edit-icon {
+    text-align: start;
+    background-image: url('/images/boyu/btn/btnCourseMore.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5rem;
+    height: 1.2rem;
+    transition: 0.3s;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+/* 背面的卡片樣式 */
+.course-card-back-bo {
+  width: 30rem;
+  height: 34rem;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+
+  backface-visibility: hidden; /* 隱藏背面 */
+  transition: all 0.5s ease; /* 添加過渡效果 */
+
+  @media (max-width: 768px) {
+    width: 28rem;
+    height: 32rem;
+  }
+}
+
+.course-card-back-bo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(218, 165, 32, 0),
+    rgb(116, 88, 17)
+  );
+  background-size: contain;
+  z-index: 0;
+}
+
+.course-card-bo:hover .course-card-back-bo {
+  transform: translateX(1.5rem) translateY(-15rem) rotate(6deg); /* 懸停時前面偏移10度 */
+}
+
+/* 標識不同的 SwiperSlide */
+.swiper-slide.course-slide-1 .course-card-bo {
+  top: 0;
+  .course-card-front-bo {
+    background-image: url('/images/boyu/course-type/course-type-1.jpg');
+    &:hover {
+      background: var(--primary-dark);
+    }
+  }
+  .course-card-back-bo {
+    background-image: url('/images/boyu/course-type/course-type-1.jpg');
+  }
+}
+
+.swiper-slide.course-slide-2 .course-card-bo {
+  .course-card-front-bo {
+    background-image: url('/images/boyu/course-type/course-type-2.jpg');
+    &:hover {
+      background: var(--primary-dark);
+    }
+  }
+
+  .course-card-back-bo {
+    background-image: url('/images/boyu/course-type/course-type-2.jpg');
+  }
+}
+
+.swiper-slide.course-slide-3 .course-card-bo {
+  .course-card-front-bo {
+    background-image: url('/images/boyu/course-type/course-type-3.jpg');
+    &:hover {
+      background: var(--primary-dark);
+    }
+  }
+  .course-card-back-bo {
+    background-image: url('/images/boyu/course-type/course-type-3.jpg');
+  }
+}
+
+.swiper-slide.course-slide-4 .course-card-bo {
+  .course-card-front-bo {
+    background-image: url('/images/boyu/course-type/course-type-4.jpg');
+    &:hover {
+      background: var(--primary-dark);
+    }
+  }
+  .course-card-back-bo {
+    background-image: url('/images/boyu/course-type/course-type-4.jpg');
+  }
+}
+
+.swiper-slide.course-slide-5 .course-card-bo {
+  .course-card-front-bo {
+    background-image: url('/images/boyu/course-type/course-type-5.jpg');
+    &:hover {
+      background: var(--primary-dark);
+    }
+  }
+  .course-card-back-bo {
+    background-image: url('/images/boyu/course-type/course-type-5.jpg');
+  }
+}

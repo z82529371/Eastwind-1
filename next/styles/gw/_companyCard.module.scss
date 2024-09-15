@@ -1,0 +1,119 @@
+$primary: var(--primary);
+$primary-dark: var(--primary-dark);
+$white: var(--white);
+$warning: #ffc107;
+$black: #000000;
+$card-bg: rgba(188, 188, 188, 0.485);
+
+.card {
+  max-width: 70rem;
+  width: 100%;
+  height: 179.5px;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: $card-bg;
+}
+
+.cardBody {
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .badge {
+    background-color: $primary;
+    color: $white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 1.5rem; // 增加到 1.5rem
+  }
+  .logoAndName {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoContainer {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+  }
+
+  .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .logoFallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .companyName {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $black;
+    margin: 0;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+
+    .ratingNumber {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $white;
+    }
+
+    .ratingIcon {
+      font-size: 1.5rem;
+      color: $white;
+      margin-left: 4px;
+    }
+  }
+
+  .info {
+    margin: 2px 0; // 減少垂直間距
+    color: $black;
+    flex: 1;
+    font-size: 1.5rem; // 減小其他信息的字體大小
+  }
+
+  .buttonContainer {
+    text-align: right;
+  }
+
+  .btn {
+    background-color: $primary;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem; // 增加到 1.5rem
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+}

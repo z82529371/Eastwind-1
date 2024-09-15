@@ -1,0 +1,76 @@
+// 變量定義
+$primary: var(--primary);
+$primary-dark: var(--primary-dark);
+$white: var(--white);
+$warning: #ffc107;
+$black: #000000;
+$card-bg: rgba(188, 188, 188, 0.485);
+
+.card {
+  max-width: 70rem;
+  width: 100%;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: $card-bg;
+
+  .cardBody {
+    .flexContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .company_name {
+      width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 2.5rem; // 增加到 2rem
+      font-weight: bold;
+      color: $black;
+      margin: 0;
+    }
+    .location {
+      font-size: 1.5rem;
+      color: var(--background);
+    }
+
+    .badge {
+      background-color: $primary;
+      color: $white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 1.5rem; // 增加到 1.5rem
+    }
+
+    .test {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .info {
+      margin: 4px 0; // 稍微增加垂直間距
+      color: $black;
+      font-size: 1.5rem; // 增加到 1.5rem
+    }
+
+    .buttonContainer {
+      text-align: right;
+    }
+
+    .btn {
+      background-color: $primary;
+      padding: 10px 20px; // 稍微增加按鈕大小
+      border-radius: 4px;
+      color: $white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem; // 增加到 1.5rem
+
+      &:hover {
+        background-color: $primary-dark;
+      }
+    }
+  }
+}

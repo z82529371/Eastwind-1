@@ -1,0 +1,326 @@
+.main {
+  width: 100%;
+  padding: 6.4rem;
+}
+
+.orderList-bl {
+  width: 100%;
+  padding: 2.4rem 2.4rem;
+  border: 2px solid var(--primary);
+  background: var(--form-bg);
+  .orderTitle-bl {
+    padding: 1.2rem 2.4rem;
+    background: var(--form-bg-dark);
+
+    .btnBack-bl {
+      color: var(--primary-dark);
+    }
+
+    .statusLight-bl {
+      color: var(--primary);
+    }
+
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  .status-bl {
+    padding: 4.8rem 4.8rem;
+    border-bottom: 3px solid var(--primary-dark);
+    position: relative;
+    .line {
+      position: absolute;
+      width: calc(100% - 198px);
+      top: 68px;
+      left: 104px;
+      border: 2px solid var(--primary-dark);
+      z-index: 1;
+    }
+    .statusBox-bl {
+      font-size: 1.2rem;
+      color: var(--text-hover-color);
+      z-index: 2;
+
+      .checkStatus-bl {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: var(--white);
+        border: 2px solid var(--primary-dark);
+
+        i {
+          display: none;
+        }
+      }
+      .active {
+        background: var(--primary-dark);
+        color: var(--white);
+        i {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .orderInfo-bl {
+    padding: 2.4rem 0;
+    .leftArea-bl {
+      flex: 2;
+    }
+    .rightArea-bl {
+      flex: 1;
+    }
+    .infoBox-bl {
+      border: 1px solid var(--primary);
+      .infoTitle-bl {
+        padding: 2.4rem 2.4rem;
+        border-bottom: 1px solid var(--primary);
+      }
+      .infoBody-bl {
+        padding: 2.4rem 2.4rem;
+        .title {
+          width: 80px;
+        }
+        .orderItem-bl {
+          .itemContent-bl {
+            display: grid;
+            grid-template-columns: 60px 1fr; /* 固定圖片寬度 */
+            align-items: center;
+            flex: 6;
+            .itemImg-bl {
+              width: 60px;
+              height: 60px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .itemAmount-bl {
+            flex: 1;
+            text-align: center;
+          }
+          .itemPrice-bl {
+            flex: 3;
+            text-align: end;
+          }
+        }
+        .orderprice-bl {
+          border-top: 1px solid var(--primary);
+          .num-bl {
+            width: 240px;
+            text-align: end;
+          }
+
+          .discount-bl {
+            color: var(--error-color);
+          }
+
+          .totle-bl {
+            color: var(--primary-dark);
+          }
+        }
+      }
+    }
+  }
+}
+.btnGroup-bl {
+  .btnOrder-bl {
+    width: 130px;
+    height: 45px;
+    font-size: 2rem;
+    font-weight: 900;
+    border-radius: 5px;
+    border: none;
+    &:hover {
+      background: var(--text-color);
+      color: var(--white);
+    }
+  }
+  .btnComment-bl {
+    color: var(--white);
+    background: var(--primary);
+    &:hover {
+      background: var(--primary-dark);
+    }
+    &:disabled {
+      background: var(--bg-text-hover-color);
+      color: var(--text-hover-color);
+      cursor: not-allowed;
+      border: 2px solid var(---bg-text-hover-color);
+    }
+  }
+  .btnRefund-bl {
+    color: var(--primary-dark);
+    background: transparent;
+    border: 2px solid var(--primary-dark);
+    &:hover {
+      background: var(--primary-dark);
+      color: var(--white);
+    }
+  }
+}
+
+.fullscreenblack-bl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100svw;
+  height: 100svh;
+  z-index: 1040;
+  background: rgba(0, 0, 0, 0.8);
+  &.active {
+    display: flex;
+    animation-duration: 0.3s;
+    animation-name: open;
+    animation-iteration-count: 1;
+  }
+  .comment-bl {
+    background: var(--white);
+    padding: 1rem 4rem;
+    z-index: 1050;
+    width: 50%;
+    height: 50%;
+    .commentArea-bl {
+      max-height: 65%;
+      overflow: auto;
+    }
+    .itemContent-bl {
+      display: grid;
+      grid-template-columns: 90px 1fr; /* 固定圖片寬度 */
+      .itemImg-bl {
+        width: 80px;
+        height: 80px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .star-bl {
+        button {
+          background: transparent;
+          border: 0px;
+        }
+        .on {
+          color: var(--primary);
+        }
+        .off {
+          color: var(--text-hover-color);
+        }
+      }
+    }
+    .commentBox-bl {
+      .box-bl {
+        outline: 3px solid var(--primary);
+        border-radius: 5px;
+        height: 80px;
+        padding: 1rem;
+      }
+      textarea {
+        resize: none;
+        outline: 3px solid var(--primary);
+        border: none;
+        &:focus {
+          outline: 3px solid var(--primary-dark);
+        }
+      }
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    padding: 2.4rem;
+  }
+  .orderList-bl {
+    padding: 2rem 2rem;
+
+    .orderInfo-bl {
+      padding: 1.2rem 0;
+      .infoBox-bl {
+        .infoTitle-bl {
+          padding: 1.2rem 1.2rem;
+        }
+        .infoBody-bl {
+          padding: 1.2rem 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0;
+  }
+
+  .orderList-bl {
+    padding: 0;
+    border: none;
+
+    .status-bl {
+      padding: 2.4rem 2.4rem;
+      border-bottom: 3px solid var(--primary-dark);
+      position: relative;
+
+      .arrow {
+        position: absolute;
+        width: 3.6rem;
+        height: 3.6rem;
+        place-items: center;
+        top: calc(50% - 2.4rem);
+        left: calc(50% - 1.5rem);
+        color: var(--primary-dark);
+      }
+    }
+
+    .orderInfo-bl {
+      flex-direction: column;
+      padding: 2rem 0;
+      .infoBox-bl {
+        border: none;
+        .infoTitle-bl {
+          padding: 2rem 2rem;
+        }
+        .infoBody-bl {
+          padding: 2rem 2rem;
+          .itemContent-bl {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .btnGroup-bl {
+      .btnOrder-bl {
+        width: 90%;
+      }
+    }
+  }
+
+  .fullscreenblack-bl {
+    .comment-bl {
+      padding: 1rem 2rem;
+      width: 100%;
+      height: 100%;
+      .commentArea-bl {
+        height: 85%;
+      }
+    }
+  }
+}

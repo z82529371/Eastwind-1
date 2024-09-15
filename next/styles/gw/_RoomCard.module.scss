@@ -1,0 +1,77 @@
+.roomTitle {
+  display: flex;
+  align-items: center;
+}
+.open {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  .favIcon {
+    font-size: 2rem;
+  }
+  button {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 0;
+  }
+}
+.logoArea {
+  img {
+    max-height: 8rem; /* 設置最大高度 */
+    width: auto;
+    object-fit: contain;
+    margin-right: 8px; /* 添加間距以分開圖片和文字 */
+  }
+}
+.nameArea {
+  display: flex;
+  flex-direction: column;
+  .rate {
+    display: flex;
+  }
+  .starIcon {
+    font-size: 2em;
+    color: red;
+  }
+}
+.roomAdBox {
+  display: flex;
+  flex-direction: column;
+}
+.roomAdd {
+  display: flex;
+}
+.infotext {
+}
+.mapImg {
+  img {
+    width: auto;
+    max-height: 4em; /* 設置最大高度 */
+    object-fit: contain;
+    margin-left: 8px; /* 添加間距以分開圖片和文字 */
+  }
+}
+.serverBox {
+  display: flex;
+  gap: 1em;
+}
+.roomIntroduction {
+  .title {
+    border-bottom: 1px solid black;
+    margin-bottom: 2em;
+  }
+  .content {
+    margin-bottom: 1em;
+  }
+}
+
+.roomPrice {
+  .title {
+    border-bottom: 1px solid black;
+    margin-bottom: 2em;
+  }
+  .content {
+    margin-bottom: 1em;
+  }
+}

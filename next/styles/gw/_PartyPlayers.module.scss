@@ -1,0 +1,22 @@
+.partyPlayers {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // 使用 gap 属性来设置子元素之间的间距
+  margin-bottom: 2rem; // 增加底部边距，与其他元素分开
+
+  // 如果你希望在小屏幕上改变布局，可以添加媒体查询
+  @media (max-width: 768px) {
+    gap: 0.8rem; // 在小屏幕上减小间距
+  }
+}
+
+// 如果需要，可以为每个 PlayerCard 添加额外的样式
+.partyPlayers > div {
+  width: 100%; // 确保每个卡片占满容器宽度
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // 添加一些阴影效果
+  transition: transform 0.2s ease-in-out; // 添加悬停效果的过渡
+
+  &:hover {
+    transform: translateY(-4px); // 悬停时略微上移
+  }
+}

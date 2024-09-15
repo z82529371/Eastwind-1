@@ -1,0 +1,186 @@
+/* 選取框樣式 */
+.navigation-checkbox-bo {
+  display: none; /* 隱藏選取框 */
+}
+
+/* 導航按鈕樣式 */
+.navigation-button-bo {
+  display: none; /* 預設隱藏按鈕 */
+  @media screen and (max-width: 576px) {
+    display: block; /* 當屏幕寬度小於576px時顯示按鈕 */
+    background-color: var(--primary); /* 設置按鈕背景顏色 */
+    height: 2.4rem; /* 設置按鈕高度 */
+    width: 2.4rem; /* 設置按鈕寬度 */
+    border-radius: 5px; /* 設置圓角 */
+    text-align: center; /* 設置文字對齊方式 */
+    cursor: pointer; /* 設置鼠標樣式 */
+    position: relative; /* 設置相對定位 */
+    z-index: 2000; /* 設置堆疊順序 */
+  }
+}
+
+/* 導航背景樣式 */
+.navigation-background-bo {
+  display: none; /* 預設隱藏背景 */
+  @media screen and (max-width: 576px) {
+    display: block; /* 當屏幕寬度小於576px時顯示背景 */
+    height: 100vh; /* 設置背景高度 */
+    width: 0; /* 設置背景寬度 */
+    background-image: radial-gradient(
+      var(--background),
+      var(--background-dark)
+    ); /* 設置背景漸變顏色 */
+    z-index: 1000; /* 設置堆疊順序 */
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); /* 設置過渡效果 */
+    position: absolute; /* 設置絕對定位 */
+    top: 0; /* 設置距頂部0 */
+    right: 0; /* 設置距右邊0 */
+  }
+}
+
+/* 當選取框被選中時改變背景樣式 */
+.navigation-checkbox-bo:checked ~ .navigation-background-bo {
+  display: block; /* 顯示背景 */
+  width: 100vw; /* 設置寬度 */
+  position: fixed; /* 設置固定定位 */
+  top: 0; /* 設置距頂部0 */
+  right: 0; /* 設置距右邊0 */
+  background-image: radial-gradient(
+    var(--background),
+    var(--background-dark)
+  ); /* 設置背景漸變顏色 */
+  z-index: 0; /* 設置堆疊順序 */
+}
+
+/* 導航菜單樣式 */
+.navigation-nav-bo {
+  display: none;
+
+  @media screen and (max-width: 576px) {
+    display: block;
+  }
+  height: 100vh; /* 設置導航高度 */
+  position: fixed; /* 設置固定定位 */
+  top: 0; /* 設置距頂部0 */
+  left: -200px; /* 設置距左邊0 */
+  z-index: 1500; /* 設置堆疊順序 */
+  opacity: 0; /* 設置透明度 */
+  width: 0; /* 設置寬度 */
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* 設置過渡效果 */
+}
+
+/* 導航列表樣式 */
+.navigation-list-bo {
+  position: absolute; /* 設置絕對定位 */
+  top: 50%; /* 設置距頂部50% */
+  left: calc(50% + 200px); /* 設置距左邊50% */
+  transform: translate(-50%, -50%); /* 設置位移 */
+  list-style: none; /* 設置列表樣式 */
+  text-align: center; /* 設置文字對齊方式 */
+  width: 100%; /* 設置寬度 */
+}
+
+/* 導航項目樣式 */
+.navigation-item-bo {
+  display: none;
+  margin: 1rem; /* 設置外邊距 */
+}
+
+/* 導航鏈接樣式 */
+.navigation-link-bo:link,
+.navigation-link-bo:visited {
+  display: none;
+  padding: 0.6rem 1.2rem; /* 設置內邊距 */
+  color: var(--bg-text-color); /* 設置文字顏色 */
+  text-decoration: none; /* 去除文字裝飾 */
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    var(--bg-text-color) 50%
+  ); /* 設置背景圖片 */
+  background-size: 230%; /* 設置背景大小 */
+  transition: all 0.4s; /* 設置過渡效果 */
+}
+
+/* 當鏈接被點擊時的樣式 */
+.navigation-link-bo:active {
+  background-position: 100%; /* 設置背景位置 */
+  color: var(--text-color); /* 設置文字顏色 */
+  /* font-weight: 900; */
+  transform: translateX(0.4rem); /* 設置位移 */
+}
+
+/* 當選取框被選中時改變導航菜單樣式 */
+.navigation-checkbox-bo:checked ~ .navigation-nav-bo {
+  opacity: 1; /* 設置透明度 */
+  width: 100%; /* 設置寬度 */
+}
+
+/* 導航圖標樣式 */
+.navigation-icon-bo {
+  position: relative; /* 設置相對定位 */
+  margin-top: 1.1rem; /* 設置頂部外邊距 */
+}
+
+/* 導航圖標和其偽元素樣式 */
+.navigation-icon-bo,
+.navigation-icon-bo::before,
+.navigation-icon-bo::after {
+  width: 1.2rem; /* 設置寬度 */
+  height: 2px; /* 設置高度 */
+  background-color: var(--bg-text-color); /* 設置背景顏色 */
+  display: inline-block; /* 設置行內塊 */
+}
+
+/* 導航圖標偽元素樣式 */
+.navigation-icon-bo::before,
+.navigation-icon-bo::after {
+  content: ''; /* 設置內容 */
+  position: absolute; /* 設置絕對定位 */
+  left: 0; /* 設置距左邊0 */
+  transition: all 0.2s; /* 設置過渡效果 */
+}
+
+/* 導航圖標偽元素 before 樣式 */
+.navigation-icon-bo::before {
+  top: -0.5rem; /* 設置距頂部-0.5rem */
+}
+
+/* 導航圖標偽元素 after 樣式 */
+.navigation-icon-bo::after {
+  top: 0.5rem; /* 設置距頂部0.5rem */
+}
+
+/* 當選取框被選中時改變導航圖標樣式 */
+.navigation-checkbox-bo:checked + .navigation-button-bo .navigation-icon-bo {
+  background-color: transparent; /* 設置背景顏色為透明 */
+}
+
+/* 當選取框被選中時改變導航圖標偽元素 before 樣式 */
+.navigation-checkbox-bo:checked
+  + .navigation-button-bo
+  .navigation-icon-bo::before {
+  top: 0; /* 設置距頂部0 */
+  transform: rotate(135deg); /* 設置旋轉角度 */
+}
+
+/* 當選取框被選中時改變導航圖標偽元素 after 樣式 */
+.navigation-checkbox-bo:checked
+  + .navigation-button-bo
+  .navigation-icon-bo::after {
+  top: 0; /* 設置距頂部0 */
+  transform: rotate(-135deg); /* 設置旋轉角度 */
+}
+
+/* 將所有鏈接項目和鏈接預設隱藏 */
+.navigation-item-bo,
+.navigation-link-bo {
+  display: none;
+}
+
+/* 當復選框被選中時，顯示導航項目和鏈接 */
+.navigation-checkbox-bo:checked ~ .navigation-nav-bo .navigation-item-bo,
+.navigation-checkbox-bo:checked ~ .navigation-nav-bo .navigation-link-bo {
+  display: block; /* 或 inline-block 取決於你的需求 */
+}

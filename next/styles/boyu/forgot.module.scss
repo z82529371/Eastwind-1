@@ -1,0 +1,328 @@
+/* 整個登入框的容器 */
+.forgot-box-bo {
+  width: 100%;
+  height: 100vh;
+}
+
+/* 使用者登入區域 */
+.user-forgot-section-bo {
+  position: relative;
+  flex-grow: 1;
+  gap: 3rem;
+  height: 100%;
+
+  background-image: url(/images/boyu/login/bg-user.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 1s;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto; /* 修改這裡，讓高度自適應內容 */
+    padding: 6rem 0 2.4rem 0; /* 減少內邊距 */
+    gap: 1.2rem; /* 減少間距 */
+  }
+
+  /* 當滑鼠懸停時的樣式 */
+  &:hover {
+    flex-grow: 4;
+    @media (max-width: 768px) {
+      flex-grow: 1;
+    }
+
+    /* 當滑鼠懸停在 user-forgot-section-bo 上，且 hover 狀態時，user-forgot-title-bo 的樣式 */
+    &:hover .user-forgot-title-bo {
+      flex-direction: row;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+/* 使用者登入區域的 hover 狀態 */
+.user-forgot-section-bo.hover {
+  flex-grow: 4;
+  @media (max-width: 768px) {
+    flex-grow: 1;
+  }
+}
+
+/* 使用者登入區域標題的 hover 狀態 */
+.user-forgot-section-bo.hover .user-forgot-title-bo {
+  flex-direction: row;
+}
+
+/* 使用者登入標題 */
+.user-forgot-title-bo {
+  flex-direction: column;
+  z-index: 2;
+  color: var(--bg-text-color);
+  gap: 0.8rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+/* 使用者登入表單容器 */
+.user-forgot-box-bo {
+  padding: 3.6rem 0;
+  flex-direction: column;
+  width: 40rem;
+  background: var(--background);
+  z-index: 4;
+  display: none;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem; /* 減少內邊距 */
+  }
+  @media (max-width: 576px) {
+    width: 30rem;
+  }
+}
+
+/* 使用者登入表單 */
+.user-forgot-form-bo {
+  cursor: default;
+  position: relative;
+  padding: 0 2.4rem 1.2rem 2.4rem;
+  z-index: 10;
+  gap: 1.2rem;
+
+  @media (max-width: 576px) {
+    padding: 0.8rem 0 1.2rem 0;
+  }
+}
+
+.user-forgot-btn-box-bo {
+  gap: 3rem;
+
+  @media (max-width: 576px) {
+    gap: 2.4rem;
+  }
+}
+
+/* 使用者登入按鈕 */
+.btn-user-forgot-bo {
+  width: 40%;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.2rem 1.2rem;
+}
+
+.btn-user-forgot-bo:hover {
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+}
+
+/* 公司登入區域 */
+.company-forgot-section-bo {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+  background-image: url(/images/boyu/login/bg-company.png);
+  background-size: cover;
+  background-position: center;
+  transition: all 1s;
+  gap: 3rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto; /* 修改這裡，讓高度自適應內容 */
+    padding: 2.4rem; /* 減少內邊距 */
+
+    gap: 1.2rem; /* 減少間距 */
+  }
+
+  /* 當滑鼠懸停時的樣式 */
+  &:hover {
+    flex-grow: 4;
+    @media (max-width: 768px) {
+      flex-grow: 1;
+    }
+
+    /* 當滑鼠懸停在 company-forgot-section-bo 上，且 hover 狀態時，company-forgot-title-bo 的樣式 */
+    &:hover .company-forgot-title-bo {
+      flex-direction: row;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+/* 公司登入區域的 hover 狀態 */
+.company-forgot-section-bo.hover {
+  flex-grow: 4;
+  @media (max-width: 768px) {
+    flex-grow: 1;
+  }
+}
+
+/* 公司登入區域標題的 hover 狀態 */
+.company-forgot-section-bo.hover .company-forgot-title-bo {
+  flex-direction: row;
+}
+
+/* 公司登入標題 */
+.company-forgot-title-bo {
+  flex-direction: column;
+  z-index: 2;
+  color: var(--bg-text-color);
+  gap: 0.8rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+/* 公司登入表單容器 */
+.company-forgot-box-bo {
+  padding: 3.6rem 0;
+  flex-direction: column;
+  width: 40rem;
+  background: var(--background);
+  z-index: 4;
+  display: none;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem; /* 減少內邊距 */
+  }
+
+  @media (max-width: 576px) {
+    width: 30rem;
+  }
+}
+
+/* 公司登入表單 */
+.company-forgot-form-bo {
+  cursor: default;
+  position: relative;
+  padding: 0 2.4rem 1.2rem 2.4rem;
+  z-index: 10;
+  gap: 1.2rem;
+
+  @media (max-width: 576px) {
+    padding: 0 1.6rem 1.2rem 1.6rem;
+  }
+}
+
+.company-forgot-btn-box-bo {
+  gap: 3rem;
+
+  @media (max-width: 576px) {
+    gap: 2.4rem;
+  }
+}
+
+/* 公司登入按鈕 */
+.btn-company-forgot-bo {
+  width: 40%;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.2rem 1.2rem;
+}
+
+.btn-company-forgot-bo:hover {
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+}
+
+/* 表單組件 */
+.form-group-bo {
+  width: 100%;
+  position: relative;
+}
+
+.form-input-bo {
+  color: var(--primary);
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  background-color: var(--white);
+  border: none;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.input-email-bo,
+.input-taxID-bo {
+  margin-top: 0.8rem;
+}
+
+.form-input-bo:focus,
+.form-input-bo:hover {
+  outline: 3px solid var(--primary);
+}
+
+.form-input-bo::-webkit-input-placeholder {
+  color: var(--primary);
+}
+
+.btn-get-CAPTCHA-bo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.2rem 0.8rem;
+}
+
+.btn-get-CAPTCHA-bo:hover {
+  background-color: var(--primary-dark);
+  color: var(--bg-text-color);
+}
+
+/* 使用者登入表單容器的 active 狀態 */
+
+.active {
+  display: block;
+}
+
+.form-input-bo:focus {
+  display: block;
+}
+
+.text-error-bo {
+  padding: 0 2rem;
+  color: var(--primary);
+}
+
+.swal-btn-bo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background-color: var(--primary);
+  color: var(--bg-text-color);
+  padding: 0.4rem 1rem;
+}
+
+.swal-popup-bo {
+  background-color: var(--form-bg);
+}
+
+.swal-icon-bo {
+  font-size: 1.6rem;
+
+  @media (max-width: 576px) {
+    font-size: 1.4rem;
+  }
+}
